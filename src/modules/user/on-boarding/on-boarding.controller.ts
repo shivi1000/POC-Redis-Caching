@@ -1,6 +1,5 @@
-import { Body, Controller, Headers, Post, Res, UseGuards } from '@nestjs/common';
-import { AuthGuard } from '@nestjs/passport';
-import { ApiBasicAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
+import { Body, Controller, Headers, Post, Res } from '@nestjs/common';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { Response } from 'express';
 import { HttpResponse } from 'src/common/httpResponse';
 import { DeviceParamsDto, LoginDto } from 'src/modules/user/on-boarding/dto/on-boarding.dto';
