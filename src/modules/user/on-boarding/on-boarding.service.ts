@@ -75,6 +75,19 @@ export class UserOnBoardingService {
       throw new BadRequestException(RESPONSE_MSG.INVALID_OTP);
     }
 
+      userData = await this.userEntity.findOneAndUpdateWithRedis(
+        { _id: userData._id },
+        {
+          mobileStatus: true,
+          status: ENUM.USER_PROFILE_STATUS.ACTIVE,
+          'otp.isVerified': true,
+          _id: userData._id,
+        },
+        {
+          new: true,
+        }
+      );
+
     const addSessionData: CreateUserSession = {
       userId: userData?._id,
       ipAddress: deviceParamsDto?.ip,

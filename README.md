@@ -64,15 +64,15 @@ PORT=8005          //replace with your NestJS port
 ## MONGO DB
 
 ```bash
-URI=''              //add your mongodb database url
+URI=''             //add your mongodb database url
 
 ```
 
 ## REDIS
 
 ```bash
-REDIS_INDEX_SESSION=''         //add your redis index session
-REDIS_HOST=''          //add your redis host
+REDIS_INDEX_SESSION=0        //add your redis index session
+REDIS_HOST=127.0.0.1          //add your redis host
 REDIS_PORT=6379
 
 ```
@@ -108,8 +108,8 @@ npm run dev
 
 ```bash
 {
-  "mobileNo": "+19876543210"
-  "password": "User@123",
+  "mobileNo": "+19876543210",
+  "password": "User@123"
 }
 
 ```
@@ -118,7 +118,7 @@ npm run dev
 
 ```bash
 {
-  "userId": "64c35c5b62392e01a7a27bc2",
+  "userId": "65cdbe067e089c53ee0c4714",
   "otp": "123456"
 }
 ```
